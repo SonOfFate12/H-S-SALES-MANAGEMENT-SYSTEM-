@@ -52,9 +52,9 @@ class LoginForm(FlaskForm):
     password = PasswordField(validators=[InputRequired(), Length(min=4, max=20)], render_kw={"placeholder": "password"})
     submit = SubmitField('Login')
 
-@app.route('/')
-def home():
-    return render_template('home.html')
+@app.route('/index')
+def index():
+    return render_template('index.html')
 
 @app.route('/register', methods=['GET', 'POST'])
 def register():
